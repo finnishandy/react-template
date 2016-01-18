@@ -25,17 +25,13 @@ var Link = React.createClass({
                 .toLowerCase()
                 .trim()
                 .replace(' ', '-')
-        return React.createElement('div',
-            null,
-            React.createElement(
-                'a',
-                {href: url},
-                this.props.label
-            ),
-            React.createElement('br')
+        return (
+            <div>
+                <a href={url}>{this.props.label}</a><br/>
+            </div>
         )
     }
 })
 
-ReactDOM.render(   React.createElement(     Menu,     null   ),   document.getElementById('menu') )
+ReactDOM.render(<Menu/>, document.getElementById('menu') )
 
