@@ -8,14 +8,12 @@ var Menu = React.createClass({
             'Services',
             'Portfolio',
             'Contact us']
-        return React.createElement('div',
-            null,
-            menus.map(function(v,i){
-                return React.createElement('div',
-                    {key: i},
-                    React.createElement(Link, {label: v})
-                )
-            })
+        return (
+            <div>
+                {menus.map(function(v,i){
+                    return <div key={i}><Link label={v}/></div>
+                })}
+            </div>
         )
     }
 })
